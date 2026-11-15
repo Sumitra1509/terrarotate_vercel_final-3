@@ -1,5 +1,10 @@
 # TerraRotate AI — TerraVyn
 
+**NASA Space Apps Challenge 2026**  
+**Selected challenge:** Field Shift: Adapting Farms with NASA Data  
+**Team:** TerraVyn  
+**Team member:** Sumitra Mahalingam
+
 A Next.js decision-support prototype for exploring crop rotation choices using NASA POWER historical weather observations, farmer-entered field information, preliminary crop traits, and farmer priorities.
 
 ## Live demo workflow
@@ -42,3 +47,14 @@ NASA POWER: https://power.larc.nasa.gov/docs/services/api/temporal/daily/
 ## Current-season data treatment
 
 Completed calendar years (2020–2025) are the historical reference. The app separately requests 2026 observations up to approximately seven days before the present date, reports the most recent valid observation date, and never equates 2026 year-to-date rainfall with a completed annual total. When current-year observations are unavailable, the app explicitly says so without substituting fabricated data.
+
+
+## Farmer voice assistant (browser-based)
+Use the floating **Ask TerraVyn · Voice** button to ask English or Tamil questions and listen to the answers. The question/answer engine is transparent rule-based text grounded in the selected farm profile and scenario scores, **not an LLM or a remote chatbot**. Browser SpeechRecognition and speechSynthesis are used where available; Chrome is a good first test, and some platforms do not offer a Tamil recognition or speech voice. Text entry remains available. Depending on the browser, speech recognition may use browser-provider speech processing.
+
+## Additional NASA resources
+- **NASA POWER:** live numerical rainfall/temperature integration, used as climate context.
+- **MODIS Terra NDVI via NASA GIBS:** experimental map image for the selected coordinates and date. The image is a regional visual overlay only; numerical NDVI is **not** extracted or used for crop ranking. Some dates/locations may not return a layer.
+- **GPM IMERG precipitation**, **SMAP soil moisture**, **Landsat vegetation:** linked official sources for exploration; **not yet processed into ranking features**.
+
+Always distinguish satellite imagery, regional grids, and ground measurements. Scores remain preliminary crop-trait heuristics and require local agronomic validation.
