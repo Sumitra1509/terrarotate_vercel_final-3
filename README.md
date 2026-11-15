@@ -1,10 +1,5 @@
 # TerraRotate AI — TerraVyn
 
-**NASA Space Apps Challenge 2026**  
-**Selected challenge:** Field Shift: Adapting Farms with NASA Data  
-**Team:** TerraVyn  
-**Team member:** Sumitra Mahalingam
-
 A Next.js decision-support prototype for exploring crop rotation choices using NASA POWER historical weather observations, farmer-entered field information, preliminary crop traits, and farmer priorities.
 
 ## Live demo workflow
